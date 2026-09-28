@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок — Вечірній Київ</title>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Логотип Новинного Порталу" width="80" height="80">
+        <h1>Новинний портал "Вечірній Київ"</h1>
+        <p><a href="index.html">&larr; На Головну сторінку</a></p>
+    </header>
+
+    <main>
+        <h2>Форма зворотного зв'язку</h2>
+
+        <form action="#" method="post">
+            
+            <!-- Пункти 1-4 згруповані рамкою fieldset з легендою (п. 9 вимог) -->
+            <fieldset>
+                <legend>Персональна інформація</legend>
+                
+                <p>
+                    <label for="fullname">1. Прізвище та ім'я:</label><br>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Іванов Іван">
+                </p>
+
+                <p>
+                    <label for="email">2. E-mail:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                </p>
+
+                <p>
+                    <label for="age">3. Вік:</label><br>
+                    <input type="number" id="age" name="age" min="1" max="120" required placeholder="25">
+                </p>
+
+                <p>
+                    <label for="education">4. Освіта:</label><br>
+                    <select id="education" name="education" required>
+                        <option value="" disabled selected>Оберіть освіту</option>
+                        <option value="incomplete">Неповна</option>
+                        <option value="full">Повна</option>
+                        <option value="higher">Вища</option>
+                        <option value="professional">Професійна</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <!-- Пункт 5: Випадаючий список з метою зворотного зв'язку -->
+            <p>
+                <label for="purpose">5. Мета зворотного зв'язку:</label><br>
+                <select id="purpose" name="purpose" required>
+                    <option value="cooperation">Співпраця</option>
+                    <option value="complaint">Скарга на порушення права власності</option>
+                    <option value="suggestion">Пропозиція</option>
+                    <option value="bug">Наявність помилки</option>
+                </select>
+            </p>
+
+            <!-- Пункт 6: Текст у поле "Детально" з обмеженням на розміри та кількість символів -->
+            <p>
+                <label for="details">6. Детально:</label><br>
+                <textarea id="details" name="details" rows="6" cols="40" maxlength="300" placeholder="Опишіть ваше звернення (до 300 символів)..." style="resize: none;"></textarea>
+            </p>
+
+            <!-- Пункт 8: Згода на обробку персональних даних -->
+            <p>
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">8. Я даю згоду на обробку моїх персональних даних</label>
+            </p>
+
+            <!-- Пункт 7: Кнопки відправлення та скидання -->
+            <p>
+                <button type="submit">Надіслати інформацію</button>
+                <button type="reset">Очистити форму</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Новинний портал "Kyiv alive"</p>
+    </footer>
+
+</body>
+</html>
